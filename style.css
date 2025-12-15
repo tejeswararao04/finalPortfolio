@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+}
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+}
+
+.tagline {
+    margin: 10px 0 20px;
+    font-size: 1rem;
+    color: #555;
+}
+
+.links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #0066cc;
+    font-weight: bold;
+}
+
+/* SECTIONS */
+section {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+h2 {
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+/* PROJECT CARDS */
+.project-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+}
+
+.project-card h3 {
+    margin-bottom: 10px;
+}
+
+.project-card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px;
+    font-size: 0.9rem;
+    color: #777;
+}
+section a {
+    color: #0066cc;
+    font-weight: bold;
+    text-decoration: none;
+}
