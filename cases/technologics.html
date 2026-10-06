@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technologics - Summer AI and ML Intern | Experience</title>
+    <link rel="stylesheet" href="../style.css?v=3">
+</head>
+<body>
+
+<nav class="topnav">
+    <div class="topnav-inner">
+        <a class="nav-brand" href="../index.html">Paila Tejeswara Rao</a>
+        <div class="nav-links">
+            <a href="../index.html#about">About</a>
+            <a href="../index.html#experience">Experience</a>
+            <a href="../index.html#case-studies">Case Studies</a>
+            <a href="../index.html#technical">Technical</a>
+            <a href="../index.html#coding">Coding</a>
+            <a href="../index.html#leadership">Leadership</a>
+        </div>
+        <button class="theme-btn" id="themeToggle" type="button">Dark</button>
+    </div>
+</nav>
+
+
+    <section class="hero">
+        <h1>Technologics - Summer AI and ML Intern</h1>
+        <p class="tagline">
+            YOLOv5, Object Detection, Real-time Inference | Remote
+        </p>
+        <p style="margin-top:10px; color:#555; font-size:0.95rem;">
+            <strong>May 2024 - Jun 2024</strong> | Remote
+        </p>
+        <div class="links">
+            <a href="../index.html#experience">Back to Home</a>
+        </div>
+    </section>
+
+    <section>
+        <h2>Overview</h2>
+        <div class="project-card">
+            <h3>Summer AI and ML Intern at Technologics</h3>
+            <p>May 2024 - Jun 2024 | Remote</p>
+            <p>Worked on real-time object detection using pre-trained YOLOv5 models, covering facemask recognition and vehicle detection use cases.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Role and Scope</h2>
+        <ul>
+            <li><strong>Role:</strong> Summer AI and ML Intern</li>
+            <li><strong>Duration:</strong> May 2024 - Jun 2024</li>
+            <li><strong>Location:</strong> Remote</li>
+            <li><strong>Focus:</strong> YOLOv5 fine-tuning, dataset preparation, training optimization, performance evaluation</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Key Contributions</h2>
+
+        <div class="project-card" style="margin-top:16px;">
+            <h3>1. YOLOv5 for Facemask Recognition and Vehicle Detection</h3>
+            <ul class="exp-points">
+                <li>Implemented and fine-tuned <strong>pre-trained YOLOv5 object detection models</strong> for facemask recognition and vehicle detection in real-time scenarios</li>
+                <li>Adapted pre-trained weights to task-specific data for real-time use</li>
+            </ul>
+        </div>
+
+        <div class="project-card">
+            <h3>2. Accuracy and Efficiency Improvements</h3>
+            <ul class="exp-points">
+                <li>Improved <strong>detection accuracy and inference efficiency</strong> through dataset preparation, training optimization, and performance evaluation</li>
+                <li>Focused on practical trade-offs for real-time deployment</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Skills and Tools Applied</h2>
+        <ul>
+            <li>YOLOv5, Object Detection, Transfer Learning</li>
+            <li>Dataset Preparation and Annotation</li>
+            <li>Training Optimization and Evaluation</li>
+            <li>Real-time Inference</li>
+        </ul>
+    </section>
+
+    <section>
+        <div class="links" style="text-align:center;">
+            <a href="../index.html#experience">Back to Experience</a>
+            <a href="./qwipo.html">View QWIPO</a>
+            <a href="./plant-monitoring.html">View Research Intern</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Paila Tejeswara Rao</p>
+    </footer>
+
+<script>
+(function () {
+    try {
+        var root = document.documentElement;
+        var saved = null;
+        try { saved = localStorage.getItem('theme'); } catch (e) {}
+        if (saved === 'dark' || saved === 'light') {
+            root.setAttribute('data-theme', saved);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            root.setAttribute('data-theme', 'dark');
+        }
+        var btn = document.getElementById('themeToggle');
+        function updateLabel() {
+            if (!btn) return;
+            btn.textContent = root.getAttribute('data-theme') === 'dark' ? 'Light' : 'Dark';
+        }
+        updateLabel();
+        if (btn) {
+            btn.addEventListener('click', function () {
+                var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+                root.setAttribute('data-theme', next);
+                try { localStorage.setItem('theme', next); } catch (e) {}
+                updateLabel();
+            });
+        }
+    } catch (e) {}
+})();
+</script>
+
+
+</body>
+</html>

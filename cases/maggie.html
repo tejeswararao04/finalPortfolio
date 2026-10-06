@@ -4,18 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maggi Brand Strategy | Product Case Study</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style.css?v=3">
 </head>
 <body>
+
+<nav class="topnav">
+    <div class="topnav-inner">
+        <a class="nav-brand" href="../index.html">Paila Tejeswara Rao</a>
+        <div class="nav-links">
+            <a href="../index.html#about">About</a>
+            <a href="../index.html#experience">Experience</a>
+            <a href="../index.html#case-studies">Case Studies</a>
+            <a href="../index.html#technical">Technical</a>
+            <a href="../index.html#coding">Coding</a>
+            <a href="../index.html#leadership">Leadership</a>
+        </div>
+        <button class="theme-btn" id="themeToggle" type="button">Dark</button>
+    </div>
+</nav>
+
 
     <!-- HEADER -->
     <section class="hero">
         <h1>Maggi Brand Strategy</h1>
         <p class="tagline">
-            Market, Consumer & GTM Analysis Case Study
+            Market, Consumer and GTM Analysis Case Study
         </p>
         <div class="links">
-            <a href="../index.html">← Back to Home</a>
+            <a href="../index.html">Back to Home</a>
         </div>
     </section>
 
@@ -24,13 +40,13 @@
     <h2>Overview</h2>
 
     <p>
-        This case study analyzes Maggi’s brand resilience, market positioning, and
+        This case study analyzes Maggi's brand resilience, market positioning, and
         growth opportunities in the Indian FMCG space, with a focus on aligning
         the brand to evolving health-conscious consumer trends.
     </p>
 
     <p>
-        <strong>🎨 Visual Case Study (Figma):</strong><br>
+        <strong>Visual Case Study (Figma):</strong><br>
         <a href="https://www.figma.com/presenter/ffpMDJtswodfqYyI1HirN5/maggie_case_study?node-id=1-912&p=f&t=Sv6XvJjJgELichp0-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1"
            target="_blank">
             View Visual Storytelling on Figma
@@ -41,9 +57,9 @@
 
     <!-- CONTEXT -->
     <section>
-        <h2>Context & Background</h2>
+        <h2>Context and Background</h2>
         <p>
-            Maggi is one of India’s most trusted FMCG brands, known for convenience and
+            Maggi is one of India's most trusted FMCG brands, known for convenience and
             affordability. However, increasing health awareness, regulatory scrutiny,
             and changing consumer preferences pose challenges to sustained growth.
         </p>
@@ -60,9 +76,9 @@
 
     <!-- ANALYSIS -->
     <section>
-        <h2>Market & Consumer Analysis</h2>
+        <h2>Market and Consumer Analysis</h2>
         <ul>
-            <li>Conducted TAM–SAM–SOM analysis to evaluate market potential</li>
+            <li>Conducted TAM-SAM-SOM analysis to evaluate market potential</li>
             <li>Analyzed consumer behavior shifts toward healthier food alternatives</li>
             <li>Benchmarked competitors offering protein-rich and millet-based products</li>
         </ul>
@@ -70,7 +86,7 @@
 
     <!-- SOLUTION -->
     <section>
-        <h2>Proposed Product & Brand Strategy</h2>
+        <h2>Proposed Product and Brand Strategy</h2>
         <ul>
             <li><strong>Healthy Maggi Line:</strong> Protein-rich, millet-based, low-sodium variants</li>
             <li><strong>Brand Positioning:</strong> Transition from comfort food to balanced lifestyle food</li>
@@ -92,8 +108,8 @@
     <section>
         <h2>Projected Impact</h2>
         <ul>
-            <li>10–15% increase in urban and Gen Z user base</li>
-            <li>$100–200M incremental revenue opportunity</li>
+            <li>10-15% increase in urban and Gen Z user base</li>
+            <li>$100-200M incremental revenue opportunity</li>
             <li>Improved NPS and brand trust perception</li>
         </ul>
     </section>
@@ -109,8 +125,38 @@
     </section>
 
     <footer>
-        <p>© 2025 Paila Tejeswara Rao</p>
+        <p>© 2026 Paila Tejeswara Rao</p>
     </footer>
+
+<script>
+(function () {
+    try {
+        var root = document.documentElement;
+        var saved = null;
+        try { saved = localStorage.getItem('theme'); } catch (e) {}
+        if (saved === 'dark' || saved === 'light') {
+            root.setAttribute('data-theme', saved);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            root.setAttribute('data-theme', 'dark');
+        }
+        var btn = document.getElementById('themeToggle');
+        function updateLabel() {
+            if (!btn) return;
+            btn.textContent = root.getAttribute('data-theme') === 'dark' ? 'Light' : 'Dark';
+        }
+        updateLabel();
+        if (btn) {
+            btn.addEventListener('click', function () {
+                var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+                root.setAttribute('data-theme', next);
+                try { localStorage.setItem('theme', next); } catch (e) {}
+                updateLabel();
+            });
+        }
+    } catch (e) {}
+})();
+</script>
+
 
 </body>
 </html>

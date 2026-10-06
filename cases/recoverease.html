@@ -4,24 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RecoverEASE | Product Case Study</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style.css?v=3">
 </head>
 <body>
+
+<nav class="topnav">
+    <div class="topnav-inner">
+        <a class="nav-brand" href="../index.html">Paila Tejeswara Rao</a>
+        <div class="nav-links">
+            <a href="../index.html#about">About</a>
+            <a href="../index.html#experience">Experience</a>
+            <a href="../index.html#case-studies">Case Studies</a>
+            <a href="../index.html#technical">Technical</a>
+            <a href="../index.html#coding">Coding</a>
+            <a href="../index.html#leadership">Leadership</a>
+        </div>
+        <button class="theme-btn" id="themeToggle" type="button">Dark</button>
+    </div>
+</nav>
+
 
     <!-- HEADER -->
     <section class="hero">
         <h1>RecoverEASE</h1>
         <p class="tagline">
-            Digital Physiotherapy Platform — Product Strategy & PMF Case Study
+            Digital Physiotherapy Platform - Product Strategy and PMF Case Study
         </p>
         <div class="links">
-            <a href="../index.html">← Back to Home</a>
+            <a href="../index.html">Back to Home</a>
         </div>
     </section>
 
     <!-- OVERVIEW -->
    <section>
-    <h2>Product Strategy & GTM Deck</h2>
+    <h2>Product Strategy and GTM Deck</h2>
 
     <p>
         This presentation details the problem discovery, personas, product vision,
@@ -29,7 +45,7 @@
     </p>
 
     <p>
-        <strong>📊 Product Strategy Deck:</strong><br>
+        <strong>Product Strategy Deck:</strong><br>
         <a href="https://drive.google.com/file/d/1mqmF2JGtkJAJZphN6ewvvHBHBBAqvsbS/view"
            target="_blank">
             View RecoverEASE Presentation
@@ -81,7 +97,7 @@
 
     <!-- PMF & GTM -->
     <section>
-        <h2>Product-Market Fit & GTM Strategy</h2>
+        <h2>Product-Market Fit and GTM Strategy</h2>
         <p>
             The product targets users who drop out due to affordability and access barriers.
             A tiered subscription model allows flexibility while B2B partnerships enable scale.
@@ -95,10 +111,10 @@
 
     <!-- METRICS -->
     <section>
-        <h2>Metrics & Impact</h2>
+        <h2>Metrics and Impact</h2>
         <ul>
             <li>Projected LTV:CAC ratio &gt; 3:1</li>
-            <li>Estimated Serviceable Obtainable Market (SOM): $50–250M</li>
+            <li>Estimated Serviceable Obtainable Market (SOM): $50-250M</li>
             <li>Improved rehab adherence and recovery completion rates</li>
         </ul>
     </section>
@@ -114,8 +130,38 @@
     </section>
 
     <footer>
-        <p>© 2025 Paila Tejeswara Rao</p>
+        <p>© 2026 Paila Tejeswara Rao</p>
     </footer>
+
+<script>
+(function () {
+    try {
+        var root = document.documentElement;
+        var saved = null;
+        try { saved = localStorage.getItem('theme'); } catch (e) {}
+        if (saved === 'dark' || saved === 'light') {
+            root.setAttribute('data-theme', saved);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            root.setAttribute('data-theme', 'dark');
+        }
+        var btn = document.getElementById('themeToggle');
+        function updateLabel() {
+            if (!btn) return;
+            btn.textContent = root.getAttribute('data-theme') === 'dark' ? 'Light' : 'Dark';
+        }
+        updateLabel();
+        if (btn) {
+            btn.addEventListener('click', function () {
+                var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+                root.setAttribute('data-theme', next);
+                try { localStorage.setItem('theme', next); } catch (e) {}
+                updateLabel();
+            });
+        }
+    } catch (e) {}
+})();
+</script>
+
 
 </body>
 </html>

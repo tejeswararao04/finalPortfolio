@@ -1,3 +1,29 @@
+:root {
+    --bg: #ffffff;
+    --text: #222;
+    --muted: #555;
+    --card: #ffffff;
+    --border: #ddd;
+    --link: #0066cc;
+    --nav-bg: #0f172a;
+    --nav-text: #e2e8f0;
+    --nav-hover: #ffffff;
+    --footer: #777;
+}
+
+[data-theme="dark"] {
+    --bg: #0b1220;
+    --text: #e5e7eb;
+    --muted: #9ca3af;
+    --card: #111c33;
+    --border: #24324d;
+    --link: #7cb3ff;
+    --nav-bg: #0b1220;
+    --nav-text: #cbd5e1;
+    --nav-hover: #ffffff;
+    --footer: #9ca3af;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,9 +31,13 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    background-color: #ffffff;
-    color: #222;
+    background-color: var(--bg);
+    color: var(--text);
     line-height: 1.6;
 }
 
@@ -31,14 +61,80 @@ body {
 .tagline {
     margin: 10px 0 20px;
     font-size: 1rem;
-    color: #555;
+    color: var(--muted);
 }
 
 .links a {
     margin: 0 10px;
     text-decoration: none;
-    color: #0066cc;
+    color: var(--link);
     font-weight: bold;
+}
+
+/* TOP NAV - professional dark bar */
+.topnav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--nav-bg);
+    border-bottom: 1px solid var(--border);
+}
+.topnav-inner {
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    height: 56px;
+}
+.nav-brand {
+    color: #ffffff;
+    font-weight: 800;
+    text-decoration: none;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+    margin-right: auto;
+    white-space: nowrap;
+}
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+}
+.nav-links::-webkit-scrollbar {
+    display: none;
+}
+.topnav .nav-links a {
+    color: var(--nav-text);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.88rem;
+    padding: 8px 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+}
+.topnav .nav-links a:hover {
+    color: var(--nav-hover);
+    background: rgba(255, 255, 255, 0.08);
+}
+.theme-btn {
+    margin-left: 8px;
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 999px;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+}
+.theme-btn:hover {
+    background: rgba(255, 255, 255, 0.12);
 }
 
 /* SECTIONS */
@@ -46,6 +142,7 @@ section {
     max-width: 900px;
     margin: auto;
     padding: 40px 20px;
+    scroll-margin-top: 70px;
 }
 
 h2 {
@@ -55,7 +152,8 @@ h2 {
 
 /* PROJECT CARDS */
 .project-card {
-    border: 1px solid #ddd;
+    border: 1px solid var(--border);
+    background: var(--card);
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 6px;
@@ -68,9 +166,72 @@ h2 {
 .project-card a {
     display: inline-block;
     margin-top: 10px;
-    color: #0066cc;
+    color: var(--link);
     text-decoration: none;
     font-weight: bold;
+}
+
+.project-card p,
+.project-card li {
+    color: var(--text);
+}
+
+/* EXPERIENCE - same look as project cards */
+.experience-card {
+    border: 1px solid var(--border);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    background: var(--card);
+}
+.exp-header {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 8px;
+}
+.exp-badge {
+    font-size: 1rem;
+    color: var(--text);
+}
+.exp-org {
+    font-size: 1rem;
+    color: var(--text);
+    margin-bottom: 10px;
+}
+.exp-points {
+    margin-left: 18px;
+    margin-top: 8px;
+}
+.exp-points li {
+    margin-bottom: 6px;
+    font-size: 1rem;
+    color: var(--text);
+}
+.exp-tag {
+    font-size: 1rem;
+    color: var(--text);
+    margin-bottom: 8px;
+}
+
+/* Dark mode: override hardcoded inline colors used in case pages */
+[data-theme="dark"] p[style],
+[data-theme="dark"] div[style] {
+    color: var(--text) !important;
+}
+[data-theme="dark"] div[style] {
+    border-color: var(--border) !important;
+}
+
+/* Iframes stay light for Drive embeds */
+iframe {
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+}
+
+img {
+    max-width: 100%;
 }
 
 /* FOOTER */
@@ -78,10 +239,34 @@ footer {
     text-align: center;
     padding: 30px;
     font-size: 0.9rem;
-    color: #777;
+    color: var(--footer);
 }
 section a {
-    color: #0066cc;
+    color: var(--link);
     font-weight: bold;
     text-decoration: none;
+}
+
+/* Mobile: compact professional header */
+@media (max-width: 640px) {
+    .hero {
+        padding: 40px 16px;
+    }
+    .hero h1 {
+        font-size: 1.9rem;
+    }
+    .topnav-inner {
+        height: 52px;
+        padding: 0 12px;
+    }
+    .nav-brand {
+        font-size: 0.85rem;
+    }
+    .topnav .nav-links a {
+        font-size: 0.82rem;
+        padding: 8px 8px;
+    }
+    section {
+        padding: 28px 16px;
+    }
 }

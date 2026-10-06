@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Classification using CNNs (Oxford Flowers-102) | Technical Project</title>
+    <link rel="stylesheet" href="../style.css?v=3">
+</head>
+<body>
+
+<nav class="topnav">
+    <div class="topnav-inner">
+        <a class="nav-brand" href="../index.html">Paila Tejeswara Rao</a>
+        <div class="nav-links">
+            <a href="../index.html#about">About</a>
+            <a href="../index.html#experience">Experience</a>
+            <a href="../index.html#case-studies">Case Studies</a>
+            <a href="../index.html#technical">Technical</a>
+            <a href="../index.html#coding">Coding</a>
+            <a href="../index.html#leadership">Leadership</a>
+        </div>
+        <button class="theme-btn" id="themeToggle" type="button">Dark</button>
+    </div>
+</nav>
+
+
+    <section class="hero">
+        <h1>Image Classification using CNNs (Oxford Flowers-102)</h1>
+        <p class="tagline">
+            PyTorch, CNNs, ResNet, Grad-CAM | Jan 2026 - Feb 2026
+        </p>
+        <div class="links">
+            <a href="../index.html">Back to Home</a>
+            <a href="https://github.com/tejeswararao04/OXFORD_FLOWERS_CNN" target="_blank">View on GitHub</a>
+        </div>
+    </section>
+
+    <section>
+        <h2>Overview</h2>
+        <div class="project-card">
+            <h3>Comparing standard CNNs and efficient architectures</h3>
+            <p>Jan 2026 - Feb 2026 | PyTorch, CNNs, ResNet, Grad-CAM</p>
+            <p>Image classification study on Oxford Flowers-102 comparing a standard CNN with a depthwise-separable CNN for accuracy vs efficiency trade-offs.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Key Results</h2>
+        <ul>
+            <li>Standard CNN: <strong>29.9% accuracy</strong> on Oxford Flowers-102</li>
+            <li>Depthwise-separable CNN: <strong>25.6% accuracy</strong> with far fewer parameters</li>
+            <li>Parameter reduction from <strong>415K to 89K (4.6x)</strong></li>
+            <li>Applied <strong>data augmentation, Grad-CAM, and confusion-matrix analysis</strong> to evaluate generalization and class-level misclassification</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Tech Stack and Methods</h2>
+        <ul>
+            <li>PyTorch, CNNs, ResNet-style blocks</li>
+            <li>Depthwise-separable convolutions for efficiency</li>
+            <li>Data augmentation for generalization</li>
+            <li>Grad-CAM for model interpretability</li>
+            <li>Confusion-matrix analysis for class-level errors</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Source Code</h2>
+        <p>
+            <a href="https://github.com/tejeswararao04/OXFORD_FLOWERS_CNN" target="_blank">View on GitHub - OXFORD_FLOWERS_CNN</a>
+        </p>
+    </section>
+
+    <section>
+        <div class="links" style="text-align:center;">
+            <a href="../index.html">Back to Home</a>
+            <a href="./bedmanager.html">Next: Hospital Bed Management</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Paila Tejeswara Rao</p>
+    </footer>
+
+<script>
+(function () {
+    try {
+        var root = document.documentElement;
+        var saved = null;
+        try { saved = localStorage.getItem('theme'); } catch (e) {}
+        if (saved === 'dark' || saved === 'light') {
+            root.setAttribute('data-theme', saved);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            root.setAttribute('data-theme', 'dark');
+        }
+        var btn = document.getElementById('themeToggle');
+        function updateLabel() {
+            if (!btn) return;
+            btn.textContent = root.getAttribute('data-theme') === 'dark' ? 'Light' : 'Dark';
+        }
+        updateLabel();
+        if (btn) {
+            btn.addEventListener('click', function () {
+                var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+                root.setAttribute('data-theme', next);
+                try { localStorage.setItem('theme', next); } catch (e) {}
+                updateLabel();
+            });
+        }
+    } catch (e) {}
+})();
+</script>
+
+
+</body>
+</html>

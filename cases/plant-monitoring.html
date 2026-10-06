@@ -4,18 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Automatic Plant Health Monitoring | Technical Project</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style.css?v=3">
 </head>
 <body>
+
+<nav class="topnav">
+    <div class="topnav-inner">
+        <a class="nav-brand" href="../index.html">Paila Tejeswara Rao</a>
+        <div class="nav-links">
+            <a href="../index.html#about">About</a>
+            <a href="../index.html#experience">Experience</a>
+            <a href="../index.html#case-studies">Case Studies</a>
+            <a href="../index.html#technical">Technical</a>
+            <a href="../index.html#coding">Coding</a>
+            <a href="../index.html#leadership">Leadership</a>
+        </div>
+        <button class="theme-btn" id="themeToggle" type="button">Dark</button>
+    </div>
+</nav>
+
 
     <!-- HEADER -->
     <section class="hero">
         <h1>Automatic Plant Health Monitoring System</h1>
         <p class="tagline">
-            IoT + Machine Learning | One-Year Engineering Project
+            IoT and Machine Learning | Research Intern, One-Year Engineering Project
+        </p>
+        <p style="margin-top:10px; color:#555; font-size:0.95rem;">
+            <strong>Research Intern (Under Dr. K.S. Deepthi)</strong> | Jun 2024 - Apr 2025 | Visakhapatnam, India
         </p>
         <div class="links">
-            <a href="../index.html">← Back to Home</a>
+            <a href="../index.html#experience">Back to Home</a>
+            <a href="../index.html">View Experience Section</a>
+        </div>
+    </section>
+
+    <!-- ROLE CONTEXT -->
+    <section>
+        <h2>Experience Context</h2>
+        <div class="project-card">
+            <p>
+                Research Internship, Final Year B.Tech | Jun 2024 - Apr 2025 | Visakhapatnam, India
+            </p>
+            <p style="font-size:1rem; color:#222;">
+                Built as a <strong>Research Intern under Dr. K.S. Deepthi</strong> - this Automatic Plant Health Monitoring System (IoT and ML)
+                used <strong>NPK and soil moisture data</strong> with <strong>neural-network-based prediction achieving 91.2% validation accuracy</strong>
+                and inference deployed via Flask for automated irrigation and fertilization decisions.
+            </p>
+            <p style="margin-top:8px;">
+                <a href="../index.html#experience">Back to Experience</a> |
+                <a href="./qwipo.html">View QWIPO Internship</a>
+            </p>
         </div>
     </section>
 
@@ -45,7 +84,7 @@
         <ul>
             <li>Soil sensors capturing N, P, K values and moisture levels</li>
             <li>Data preprocessing and feature preparation layer</li>
-            <li>Machine learning–based decision model</li>
+            <li>Machine learning-based decision model</li>
             <li>Web interface for monitoring and control</li>
         </ul>
     </section>
@@ -54,10 +93,9 @@
     <section>
         <h2>Machine Learning Approach</h2>
         <p>
-            Implemented a feed-forward neural network using
-            <strong>ReLU</strong> activation for hidden layers and
-            <strong>Sigmoid</strong> activation at the output layer to predict
-            irrigation and fertilization requirements.
+            Implemented a neural-network-based prediction model using NPK and soil moisture data,
+            achieving <strong>91.2% validation accuracy</strong> for irrigation and fertilization decisions,
+            with inference deployed via Flask.
         </p>
     </section>
 
@@ -65,8 +103,9 @@
     <section>
         <h2>Tech Stack</h2>
         <ul>
-            <li>Python, Flask</li>
-            <li>Neural Networks (ReLU, Sigmoid)</li>
+            <li>Python, Flask (inference deployment)</li>
+            <li>Neural Networks (91.2% validation accuracy)</li>
+            <li>NPK and soil moisture sensing</li>
             <li>HTML, CSS</li>
             <li>IoT Sensors</li>
         </ul>
@@ -74,10 +113,10 @@
 
     <!-- VALIDATION -->
     <section>
-        <h2>Validation & Learnings</h2>
+        <h2>Validation and Learnings</h2>
         <p>
             The system was validated in real-world conditions, highlighting challenges
-            such as sensor noise, data reliability, and hardware–software integration.
+            such as sensor noise, data reliability, and hardware-software integration.
             The project strengthened my understanding of end-to-end ML system deployment.
         </p>
     </section>
@@ -85,16 +124,16 @@
     <!-- SUPPORTING MATERIAL -->
     <!-- PROJECT DEMONSTRATION & MATERIAL -->
 <section>
-    <h2>Project Demonstration & Supporting Material</h2>
+    <h2>Project Demonstration and Supporting Material</h2>
 
     <p>
-        The following resources provide a complete walkthrough of the system —
+        The following resources provide a complete walkthrough of the system -
         starting with a conceptual explanation, followed by live execution,
         and concluding with detailed technical documentation.
     </p>
 
     <!-- EXPLANATION VIDEO -->
-    <h3>📄 Project Explanation</h3>
+    <h3>Project Explanation</h3>
     <iframe
         src="https://drive.google.com/file/d/15t8H7qSjXs3ryubdsl6n1H2iRTEC7jSI/preview"
         width="100%"
@@ -109,7 +148,7 @@
     </p>
 
     <!-- LIVE EXECUTION VIDEO -->
-    <h3>🎥 Live Execution Demo</h3>
+    <h3>Live Execution Demo</h3>
     <iframe
         src="https://drive.google.com/file/d/1Uka-pkFue-YqdqujPjChTxVcX9nfIpGf/preview"
         width="100%"
@@ -124,7 +163,7 @@
     </p>
 
     <!-- PPT SLIDES -->
-    <h3>📊 Technical Presentation</h3>
+    <h3>Technical Presentation</h3>
     <iframe
         src="https://docs.google.com/presentation/d/1mGVgCNO3wGEBir-btBboYWnle-7P4Juv/preview"
         width="100%"
@@ -141,8 +180,38 @@
 
 
     <footer>
-        <p>© 2025 Paila Tejeswara Rao</p>
+        <p>© 2026 Paila Tejeswara Rao</p>
     </footer>
+
+<script>
+(function () {
+    try {
+        var root = document.documentElement;
+        var saved = null;
+        try { saved = localStorage.getItem('theme'); } catch (e) {}
+        if (saved === 'dark' || saved === 'light') {
+            root.setAttribute('data-theme', saved);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            root.setAttribute('data-theme', 'dark');
+        }
+        var btn = document.getElementById('themeToggle');
+        function updateLabel() {
+            if (!btn) return;
+            btn.textContent = root.getAttribute('data-theme') === 'dark' ? 'Light' : 'Dark';
+        }
+        updateLabel();
+        if (btn) {
+            btn.addEventListener('click', function () {
+                var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+                root.setAttribute('data-theme', next);
+                try { localStorage.setItem('theme', next); } catch (e) {}
+                updateLabel();
+            });
+        }
+    } catch (e) {}
+})();
+</script>
+
 
 </body>
 </html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Bed Management System | Technical Project</title>
+    <link rel="stylesheet" href="../style.css?v=3">
+</head>
+<body>
+
+<nav class="topnav">
+    <div class="topnav-inner">
+        <a class="nav-brand" href="../index.html">Paila Tejeswara Rao</a>
+        <div class="nav-links">
+            <a href="../index.html#about">About</a>
+            <a href="../index.html#experience">Experience</a>
+            <a href="../index.html#case-studies">Case Studies</a>
+            <a href="../index.html#technical">Technical</a>
+            <a href="../index.html#coding">Coding</a>
+            <a href="../index.html#leadership">Leadership</a>
+        </div>
+        <button class="theme-btn" id="themeToggle" type="button">Dark</button>
+    </div>
+</nav>
+
+
+    <section class="hero">
+        <h1>Hospital Bed Management System</h1>
+        <p class="tagline">
+            NestJS, React, TypeScript, MongoDB, WebSockets, JWT | Oct 2025 - Nov 2025
+        </p>
+        <div class="links">
+            <a href="../index.html">Back to Home</a>
+            <a href="https://github.com/leocodeio/bedmanager" target="_blank">View on GitHub</a>
+        </div>
+    </section>
+
+    <section>
+        <h2>Overview</h2>
+        <div class="project-card">
+            <h3>Real-time bed and ICU management</h3>
+            <p>Oct 2025 - Nov 2025 | NestJS, React, TypeScript, MongoDB, WebSockets, JWT</p>
+            <p>Real-time hospital bed and ICU management system supporting occupancy tracking, patient admission and transfer workflows, and multi-hospital management.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Key Contributions</h2>
+        <ul>
+            <li>Built <strong>real-time hospital bed and ICU management</strong> with occupancy tracking and multi-hospital support</li>
+            <li>Implemented patient <strong>admission and transfer workflows</strong> across wards</li>
+            <li>Implemented <strong>WebSocket synchronization</strong> for live bed status updates</li>
+            <li>Implemented <strong>JWT authentication</strong> and <strong>role-based access control</strong> for Admin, ICU, Ward, and ER workflows</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Tech Stack</h2>
+        <ul>
+            <li>NestJS, React, TypeScript</li>
+            <li>MongoDB</li>
+            <li>WebSockets for real-time sync</li>
+            <li>JWT for authentication</li>
+            <li>Role-based access control (Admin, ICU, Ward, ER)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Source Code</h2>
+        <p>
+            <a href="https://github.com/leocodeio/bedmanager" target="_blank">View on GitHub - bedmanager</a>
+        </p>
+    </section>
+
+    <section>
+        <div class="links" style="text-align:center;">
+            <a href="../index.html">Back to Home</a>
+            <a href="./oxford-flowers.html">View CNN Project</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Paila Tejeswara Rao</p>
+    </footer>
+
+<script>
+(function () {
+    try {
+        var root = document.documentElement;
+        var saved = null;
+        try { saved = localStorage.getItem('theme'); } catch (e) {}
+        if (saved === 'dark' || saved === 'light') {
+            root.setAttribute('data-theme', saved);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            root.setAttribute('data-theme', 'dark');
+        }
+        var btn = document.getElementById('themeToggle');
+        function updateLabel() {
+            if (!btn) return;
+            btn.textContent = root.getAttribute('data-theme') === 'dark' ? 'Light' : 'Dark';
+        }
+        updateLabel();
+        if (btn) {
+            btn.addEventListener('click', function () {
+                var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+                root.setAttribute('data-theme', next);
+                try { localStorage.setItem('theme', next); } catch (e) {}
+                updateLabel();
+            });
+        }
+    } catch (e) {}
+})();
+</script>
+
+
+</body>
+</html>

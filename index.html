@@ -4,82 +4,244 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Paila Tejeswara Rao | Product Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css?v=3" />
 </head>
 <body>
+
+<nav class="topnav">
+    <div class="topnav-inner">
+        <a class="nav-brand" href="#">Paila Tejeswara Rao</a>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#case-studies">Case Studies</a>
+            <a href="#technical">Technical</a>
+            <a href="#coding">Coding</a>
+            <a href="#leadership">Leadership</a>
+        </div>
+        <button class="theme-btn" id="themeToggle" type="button">Dark</button>
+    </div>
+</nav>
 
 <section class="hero">
     <img src="assets/profile.jpg" alt="Paila Tejeswara Rao" class="profile-pic">
     <h1>Paila Tejeswara Rao</h1>
     <p class="tagline">
-        Product Design & Management @ IIIT Hyderabad | PM • Strategy • PMF • GTM
+        Product Design and Management at IIIT Hyderabad | PM, Strategy, PMF, GTM
     </p>
 
     <div class="links">
-        <a href="assets/Paila_Tejeswara_Rao_Resume.pdf" target="_blank">Resume</a>
+        <a href="https://drive.google.com/drive/folders/1u8DebyjQ6XSPWn9_w6RH54jXZ9j52iEa?usp=drive_link" target="_blank">Resume</a>
         <a href="https://www.linkedin.com/in/tejeswara-rao-paila-58511423a/" target="_blank">LinkedIn</a>
         <a href="https://github.com/tejeswararao04" target="_blank">GitHub</a>
     </div>
 </section>
 
-<section class="about">
+<section class="about" id="about">
     <h2>About Me</h2>
     <p>
-        I am a Product Design and Management graduate student at IIIT Hyderabad with
-        a strong foundation in product strategy, user research, and data-driven
-        decision making. I enjoy working at the intersection of technology,
-        business, and user needs.
+        I am a Product Design and Management graduate student at IIIT Hyderabad working
+        as a Product Management Intern at QWIPO, where I ship 0 to 1 logistics tech for
+        FMCG supply chain on ONDC - from on-ground interviews with distributors and
+        retailers to PRDs and 70+ user stories, driving outcomes like 58K hours of sales
+        effort saved through OTA strategy and Rs. 45K per month saved per distributor
+        through beat optimization.
+    </p>
+    <p style="margin-top:10px;">
+        I bring an engineering foundation in AI and ML - from IoT and neural-network
+        research to YOLOv5 detection and full-stack builds - combined with product
+        strategy reps across competitions and market validation, including a 5th-place
+        finish among 70+ teams at CaseAthon and on-ground research at Paradise for
+        VegMart. I enjoy turning field insights into shipped product.
     </p>
 </section>
 
-<section class="projects">
+<section class="experience" id="experience">
+    <h2>Experience</h2>
+
+    <div class="project-card">
+        <h3>QWIPO - Product Management Intern</h3>
+        <p>Jun 2026 - Present | Hyderabad, India (Hybrid)</p>
+        <p>QWIPO | B2B Logistics and FMCG Supply Chain - ONDC powered. India's first FMCG supply chain product to onboard distributors, powered by ONDC.</p>
+        <ul class="exp-points">
+            <li>Built a 0 to 1 prototype of a role-based logistics dashboard, defining user workflows, product requirements, and access controls, refined through multiple grooming iterations before handoff to the tech team</li>
+            <li>Conducted 10+ on-ground user interviews with distributors and retailers, uncovering JTBDs and translating customer pain points into prioritized product improvements</li>
+            <li>Researched OTA update mechanisms to address UX friction from mandatory hard updates in the existing NativeScript codebase, quantified 3.5M minutes (58K hours) of sales effort per update cycle across 70 salespeople and 10000+ retailers, informing the migration to React Native for seamless OTA updates</li>
+            <li>Contributed to building India's first vehicle beat optimization solution, enabling distributors to eliminate one delivery vehicle and save approximately Rs. 45K per month</li>
+            <li>Authored PRDs and 70+ user stories, collaborating with Product, Engineering, and business stakeholders to prioritize features and drive Agile development</li>
+        </ul>
+        <a href="cases/qwipo.html">View Experience</a>
+    </div>
+
+    <div class="project-card">
+        <h3>Automatic Plant Health Monitoring System (IoT and ML) - Research Intern</h3>
+        <p>Jun 2024 - Apr 2025 | Under Dr. K.S. Deepthi | Visakhapatnam, India</p>
+        <p>One-year research project on IoT sensing and ML for automated irrigation and fertilization.</p>
+        <ul class="exp-points">
+            <li>Built an IoT plant monitoring system using NPK and soil moisture data, with neural-network-based prediction achieving 91.2% validation accuracy and inference deployed via Flask</li>
+            <li>Validated end-to-end IoT-ML pipeline handling sensor noise, data reliability and hardware-software integration</li>
+        </ul>
+        <a href="cases/plant-monitoring.html">View Research Case</a>
+    </div>
+
+    <div class="project-card">
+        <h3>Technologics - Summer AI and ML Intern</h3>
+        <p>May 2024 - Jun 2024 | Remote | After B.Tech 3rd Year</p>
+        <p>Technologics - Summer AI and ML internship focused on real-time object detection.</p>
+        <ul class="exp-points">
+            <li>Implemented and fine-tuned pre-trained YOLOv5 object detection models for facemask recognition and vehicle detection in real-time scenarios</li>
+            <li>Improved detection accuracy and inference efficiency through dataset preparation, training optimization, and performance evaluation</li>
+        </ul>
+        <a href="cases/technologics.html">View Experience</a>
+    </div>
+
+</section>
+
+<section class="projects" id="case-studies">
     <h2>Product Case Studies</h2>
 
     <div class="project-card">
         <h3>RecoverEASE</h3>
-        <p>Digital physiotherapy product addressing rehab dropouts using AI + human care.</p>
-        <a href="cases/recoverease.html">View Case Study →</a>
+        <p>Digital physiotherapy product addressing rehab dropouts using AI and human care.</p>
+        <a href="cases/recoverease.html">View Case Study</a>
     </div>
 
     <div class="project-card">
         <h3>Maggi Brand Strategy</h3>
         <p>Market and GTM analysis proposing a health-focused product line.</p>
-        <a href="cases/maggie.html">View Case Study →</a>
+        <a href="cases/maggie.html">View Case Study</a>
     </div>
 
     <div class="project-card">
         <h3>NoBroker PMF Analysis</h3>
         <p>Product-market fit analysis with post-PMF growth recommendations.</p>
-        <a href="cases/nobroker.html">View Case Study →</a>
+        <a href="cases/nobroker.html">View Case Study</a>
     </div>
 
     <div class="project-card">
-        <h3>Faculty–Student Engagement @ IIIT-H</h3>
+        <h3>Faculty-Student Engagement at IIIT-H</h3>
         <p>Semester-long Design Thinking case study on improving classroom engagement.</p>
-        <a href="cases/faculty-engagement.html">View Case Study →</a>
+        <a href="cases/faculty-engagement.html">View Case Study</a>
+    </div>
+
+    <div class="project-card">
+        <h3>CaseAthon - IIIT Hyderabad (PM Club, Infinium Fest)</h3>
+        <p>Secured 5th place among 70+ teams from IIMs, IITs, BITS and reputed institutions. National level case competition finalist.</p>
+        <a href="cases/caseathon.html">View Case Study</a>
+    </div>
+
+    <div class="project-card">
+        <h3>VegMart - Market Research and Validation</h3>
+        <p>Course project Team 7. Field research at Paradise Gachibowli, 112 purchases KPI validation, digital procurement solution.</p>
+        <a href="cases/vegmart.html">View Case Study</a>
     </div>
 </section>
 
-<section class="projects">
-    <h2>Technical Projects & Engineering Work</h2>
+<section class="projects" id="technical">
+    <h2>Technical Projects and Engineering Work</h2>
 
     <div class="project-card">
         <h3>Automatic Plant Health Monitoring System</h3>
-        <p>One-year IoT + ML system for automated irrigation and fertilization.</p>
-        <a href="cases/plant-monitoring.html">View Technical Case →</a>
+        <p>One-year IoT and ML system for automated irrigation and fertilization.</p>
+        <a href="cases/plant-monitoring.html">View Technical Case</a>
     </div>
 
     <div class="project-card">
         <h3>Crop Predictor</h3>
         <p>ML-based web application for crop recommendation.</p>
-        <a href="cases/crop-predictor.html">View Project →</a>
+        <a href="cases/crop-predictor.html">View Project</a>
+    </div>
+
+    <div class="project-card">
+        <h3>Image Classification using CNNs (Oxford Flowers-102)</h3>
+        <p>Jan 2026 - Feb 2026 | PyTorch, CNNs, ResNet, Grad-CAM</p>
+        <p>Compared CNN and depthwise-separable CNNs on Oxford Flowers-102, achieving 29.9% and 25.6% accuracy while reducing parameters from 415K to 89K (4.6x).</p>
+        <a href="cases/oxford-flowers.html">View Project</a>
+    </div>
+
+    <div class="project-card">
+        <h3>Hospital Bed Management System</h3>
+        <p>Oct 2025 - Nov 2025 | NestJS, React, TypeScript, MongoDB, WebSockets, JWT</p>
+        <p>Real-time hospital bed and ICU management system with occupancy tracking, admission and transfer workflows, and multi-hospital management.</p>
+        <a href="cases/bedmanager.html">View Project</a>
+    </div>
+</section>
+
+<section class="projects" id="coding">
+    <h2>Coding Profiles</h2>
+
+    <div class="project-card">
+        <h3>Data Structures and Algorithms - 450+ Problems</h3>
+        <p>LeetCode, CodeChef, HackerRank</p>
+        <ul class="exp-points">
+            <li>Solved 450+ DSA problems across LeetCode, CodeChef, and HackerRank</li>
+            <li>Earned multiple platform badges, including 50-Day and 100-Day coding streak badges</li>
+        </ul>
+    </div>
+</section>
+
+<section class="projects" id="leadership">
+    <h2>Leadership and Achievements</h2>
+
+    <div class="project-card">
+        <h3>Student Placement Coordinator (SPC) - IIIT Hyderabad</h3>
+        <p>Coordinating placement activities and stakeholder communication.</p>
+    </div>
+
+    <div class="project-card">
+        <h3>Apex Member - IIIT Hyderabad</h3>
+        <p>Mentoring incoming students and organizing batch events and trips.</p>
+    </div>
+
+    <div class="project-card">
+        <h3>GATE 2025 DA - All India Rank 1604</h3>
+        <p>Secured All India Rank 1604 in GATE 2025 DA among applicants nationwide.</p>
+    </div>
+
+    <div class="project-card">
+        <h3>Technical Lead - Inventum 2K25</h3>
+        <p>Served as Technical Lead for Inventum 2K25, coordinating technical activities for the department fest at ANITS.</p>
+    </div>
+
+    <div class="project-card">
+        <h3>CaseAthon Finalist - IIIT Hyderabad (PM Club, Infinium Fest)</h3>
+        <p>Secured 5th place among 70+ teams from IIMs, IITs, BITS and reputed institutions in the national level case competition.</p>
+        <a href="cases/caseathon.html">View Case Study</a>
     </div>
 </section>
 
 <footer>
-    <p>© 2025 Paila Tejeswara Rao</p>
+    <p>© 2026 Paila Tejeswara Rao</p>
 </footer>
+
+<script>
+(function () {
+    try {
+        var root = document.documentElement;
+        var saved = null;
+        try { saved = localStorage.getItem('theme'); } catch (e) {}
+        if (saved === 'dark' || saved === 'light') {
+            root.setAttribute('data-theme', saved);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            root.setAttribute('data-theme', 'dark');
+        }
+        var btn = document.getElementById('themeToggle');
+        function updateLabel() {
+            if (!btn) return;
+            btn.textContent = root.getAttribute('data-theme') === 'dark' ? 'Light' : 'Dark';
+        }
+        updateLabel();
+        if (btn) {
+            btn.addEventListener('click', function () {
+                var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+                root.setAttribute('data-theme', next);
+                try { localStorage.setItem('theme', next); } catch (e) {}
+                updateLabel();
+            });
+        }
+    } catch (e) {}
+})();
+</script>
 
 </body>
 </html>
-
