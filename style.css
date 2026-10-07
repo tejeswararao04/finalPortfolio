@@ -3,6 +3,7 @@
     --text: #222;
     --muted: #555;
     --card: #ffffff;
+    --band: #f4f7fb;
     --border: #ddd;
     --link: #0066cc;
     --nav-bg: #0f172a;
@@ -12,13 +13,14 @@
 }
 
 [data-theme="dark"] {
-    --bg: #0b1220;
+    --bg: #121212;
     --text: #e5e7eb;
     --muted: #9ca3af;
-    --card: #111c33;
-    --border: #24324d;
+    --card: #1b1b1b;
+    --band: #171717;
+    --border: #333333;
     --link: #7cb3ff;
-    --nav-bg: #0b1220;
+    --nav-bg: #141414;
     --nav-text: #cbd5e1;
     --nav-hover: #ffffff;
     --footer: #9ca3af;
@@ -121,6 +123,12 @@ body {
     color: var(--nav-hover);
     background: rgba(255, 255, 255, 0.08);
 }
+.topnav .nav-links a.active {
+    color: var(--nav-hover);
+    background: rgba(255, 255, 255, 0.14);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
 .theme-btn {
     margin-left: 8px;
     background: transparent;
@@ -148,6 +156,28 @@ section {
 h2 {
     margin-bottom: 15px;
     font-size: 1.8rem;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+section h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 44px;
+    height: 3px;
+    border-radius: 2px;
+    background: var(--link);
+}
+
+/* SHADED SECTION BANDS - alternate surfaces so sections read apart */
+.section-band {
+    background: var(--band);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    margin-top: 12px;
+    margin-bottom: 12px;
 }
 
 /* PROJECT CARDS */
@@ -157,6 +187,54 @@ h2 {
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 6px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* SUMMARY METRIC CHIPS */
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 12px 0 4px;
+}
+.chips span {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--text);
+    border: 1px solid var(--border);
+    padding: 4px 12px;
+    border-radius: 999px;
+}
+
+/* CONTACT GRID */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+}
+.contact-grid .project-card {
+    margin-bottom: 0;
+}
+.contact-card p {
+    word-break: break-all;
+}
+.contact-card {
+    display: flex;
+    flex-direction: column;
+}
+.contact-card .contact-actions {
+    margin-top: auto;
+    padding-top: 10px;
+}
+.contact-actions a,
+.contact-actions .copy-btn {
+    margin-top: 0;
 }
 
 .project-card h3 {
@@ -169,6 +247,20 @@ h2 {
     color: var(--link);
     text-decoration: none;
     font-weight: bold;
+}
+
+.copy-btn {
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 12px;
+    color: var(--link);
+    font-weight: bold;
+    font-size: 1rem;
+    font-family: inherit;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
 }
 
 .project-card p,
